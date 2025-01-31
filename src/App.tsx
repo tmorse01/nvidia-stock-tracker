@@ -1,7 +1,14 @@
 import "@mantine/core/styles.css";
-import { MantineProvider } from "@mantine/core";
+import { MantineProvider, Container } from "@mantine/core";
 import { theme } from "./theme";
+import { NvidiaStockChart } from "./components/NvidiaStockChart";
 
 export default function App() {
-  return <MantineProvider theme={theme}>App</MantineProvider>;
+  return (
+    <MantineProvider theme={theme}>
+      <Container size="lg" py="xl">
+        <NvidiaStockChart />
+      </Container>
+    </MantineProvider>
+  );
 }
